@@ -9,7 +9,7 @@ export class SuperHeroesController {
 
     @Get()
     getAllHeroes(): SuperHeroe[] {
-        return this.superHeroeService.getAll()
+        return this.superHeroeService.getAll().slice().sort((a, b) => b.humilityScore - a.humilityScore)
     }
 
     @Post()
