@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { SuperHeroesController } from './superheroes.controller';
+import { SuperHeroesController } from './superheroe.controller';
 import { InMemoryDBModule } from '@nestjs-addons/in-memory-db';
 
 

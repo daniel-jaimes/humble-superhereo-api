@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { SuperHeroeModule } from './superheroe.module';
+import { SuperHeroeModule } from './superheroe/superheroe.module';
 import { InMemoryDBModule } from '@nestjs-addons/in-memory-db';
 
 
