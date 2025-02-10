@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, Post, ValidationPipe } from '@nestjs/common';
 import { SuperHeroe } from './superherore.entity';
 import { InMemoryDBService } from '@nestjs-addons/in-memory-db';
 
@@ -13,7 +13,7 @@ export class SuperHeroesController {
     }
 
     @Post()
-    addSuperHero(@Body() superHeroe: SuperHeroe): SuperHeroe {
+    addSuperHero(@Body(new ValidationPipe()) superHeroe: SuperHeroe): SuperHeroe {
         return this.superHeroeService.create(superHeroe)
     }
 }
